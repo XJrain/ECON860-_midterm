@@ -2,27 +2,29 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# Initialize the Target URL
+# Initialize the target URL
 URL = "http://www.charcoalpaper.com/exams/github/user/dataset"
 
-# Make a GET request to the URL
+# Make a GET request to the target URL
 response = requests.get(URL)
 
-# Parse the content
+# Parse the content using BeautifulSoup
 soup = BeautifulSoup(response.content, 'html.parser')
 
-# Attempt to find 'Github Data" on the webpage
+# Attempt to find the 'GitHub Data' heading on the webpage
 heading = soup.find('h1', string='GitHub Data')
 if not heading:
-    raise ValueError("Could not find the 'Github Data' heading on the webpage")
+    raise ValueError("Could not find the 'GitHub Data' heading on the webpage.")
 
 # Get all sibling div elements of the heading
-main_data_rows = heading.find_next_sibling('div')
+main_data_rows = heading.find_next_siblings('div')
 
-# Initialize an empty list for extracted data
+# Initialize an empty list to store extracted data
 data = []
 
+
 def extract_data_from_row(row_div):
+
     # Find all div elements inside the current row
     data_divs = row_div.find_all('div')
 
@@ -51,8 +53,9 @@ def extract_data_from_row(row_div):
 
     return [login_id, repo_count, follower_count, member_since]
 
+
 # Loop through each row div and extract data
-for row_div in main_data_rows.find_all('div', class_='row'):
+for row_div in main_data_rows:
     extracted_data = extract_data_from_row(row_div)
     if extracted_data:
         data.append(extracted_data)

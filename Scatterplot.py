@@ -22,7 +22,7 @@ plt.show()
 
 plt.close()
 
-plt.savefig('repo_vs_followers.pdf')
+plt.savefig('repo_vs_followers.png')
 
 
 
@@ -37,7 +37,7 @@ plt.show()
 
 plt.close()
 
-plt.savefig('followers_vs_start.pdf')
+plt.savefig('followers_vs_start.png')
 
 
 

@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("github_users.csv")
 df_details = pd.read_csv("github_user_details.csv")
 
+df.info()
+
+df_details.info()
+
 repo_count = df['Repo Count']
 follower_count = df['Follower Count']
 starred = df_details['Starred Count']
@@ -22,7 +26,7 @@ plt.show()
 
 plt.close()
 
-plt.savefig('repo_vs_followers.png')
+plt.savefig('repo_vs_followers.pdf')
 
 
 
@@ -37,7 +41,8 @@ plt.show()
 
 plt.close()
 
-plt.savefig('followers_vs_start.png')
+plt.savefig('followers_vs_start.pdf')
+
 
 
 

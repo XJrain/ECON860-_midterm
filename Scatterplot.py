@@ -2,11 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("github_users.csv")
+
+print(df.describe())
+
 df_details = pd.read_csv("github_user_details.csv")
 
-df.info()
-
-df_details.info()
+print(df_details.describe())
 
 repo_count = df['Repo Count']
 follower_count = df['Follower Count']

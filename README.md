@@ -18,7 +18,9 @@ pip install beautifulsoup4
 pip install matplotlib
 
 ## Screenshots
-
+![ss1](https://github.com/XJrain/ECON860-_midterm/assets/143531877/aed02d1b-0b4c-4549-bf93-683e0cbf6599)
+![ss2](https://github.com/XJrain/ECON860-_midterm/assets/143531877/a7c9a40f-a6b1-4170-82c0-0cb9393062ac)
+![ss3](https://github.com/XJrain/ECON860-_midterm/assets/143531877/33ef8f5e-ed5e-4562-a986-93e8e5a0722b)
 ## Usage
 This program is very easy to set up and use, and can be customized as needed. You can adjust the URL, .csv file names, and other parameters to fit your needs specifically. Additionally, you can modify the code to grab additional information from the GitHub API if necessary. Running the file Midterm1.py will scrape the URL desired, and put relevant information into a .csv file. It will the take the login IDs from the orginal data frame, compare them to the Github API, and pull the desired information into a new .csv file. Running the Scatterplot.py file will create scatterplots for two separate figures. One plotting Repository Count vs Follower Count, and Follower count vs Starred Count.
 

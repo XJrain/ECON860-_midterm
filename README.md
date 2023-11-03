@@ -1,7 +1,7 @@
 # ECON860-_midterm
 
 ## Description
-This program is a python script designed to collect and analyze GitHub uyser data from an assigned webpage, as well as the Github API. This program provideds an easy way to gather information about Github Users, and use that information to analyze the data and come up with conclusions. The information is gathered by scraping the given webpage using the 'requests' and 'Beautiful Soup' libraries. 'Pandas" is used to help convert the information into a dataframe, so it can be used put into a .csv file. 'Matplotlib' is used to plot data from the downloaded .csv files into scatterplots. 
+This program is a python script designed to collect and analyze GitHub user data from an assigned webpage, as well as the Github API. This program provideds an easy way to gather information about Github Users, and use that information to analyze the data and come up with conclusions. The information is gathered by scraping the given webpage using the 'requests' and 'Beautiful Soup' libraries. 'Pandas" is used to help convert the information into a dataframe, so it can be used put into a .csv file. 'Matplotlib' is used to plot data from the downloaded .csv files into scatterplots. 
 
 ## Dependencies 
 'requests' is used for making HTTP requests that will fetch data from both websites and the Github API
